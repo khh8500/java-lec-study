@@ -1,0 +1,19 @@
+package ex04;
+
+// 계산기 클래스 = 설계도
+// add, minus, divide(나누기), multi(곱하기)
+public class Calculator {
+
+    public int add(int n1, int n2){
+        return n1+n2;
+    }
+    public int minus(int n1, int n2){
+        return n1-n2;
+    }
+    public int divide(int n1, int n2){
+        return n1/n2;
+    }
+    public int multi(int n1, int n2){
+        return n1*n2;
+    }
+}
