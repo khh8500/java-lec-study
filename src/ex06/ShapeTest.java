@@ -2,11 +2,11 @@ package ex06;
 
 class Shape1{
     public void draw() {
-        System.out.println("shape");
+        System.out.println("Shape");
     }
 }
 
-class Circle1 extends Shape1 {
+class Circle3 extends Shape1 {
     @Override
     public void draw() {
         System.out.println("Circle을 그립니다.");
