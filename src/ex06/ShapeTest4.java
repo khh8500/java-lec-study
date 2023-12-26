@@ -1,11 +1,12 @@
 //package ex06;
 //
-//    public static void print(Shape obj) {
-//        System.out.println("x=" + s.x + "y=" + s.y);
-//    }
+//public static void print(Object.obj) {
+//    System.out.println("x=" + s.x + "y=" + s.y);
+//}
 //
 //public class ShapeTest4 {
 //    public static void print(Shape s) {
+//
 //        if (obj instanceof Rectangle1) {
 //            System.out.println("실제 타입은 Rectangle");
 //        }
@@ -26,4 +27,5 @@
 //        print(s2);
 //        print(s3);
 //    }
+//} {
 //}
