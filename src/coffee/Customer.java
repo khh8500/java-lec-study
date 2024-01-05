@@ -10,6 +10,6 @@ public class Customer {
 
     public void order(String menuName){
         Coffee coffee = barista.makeCoffee();
-        System.out.println(coffee.name + "를 받았습니다");
+        System.out.println(coffee.name1 + "를 받았습니다");
     }
 }
