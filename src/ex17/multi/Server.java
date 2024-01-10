@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.Charset;
+import java.util.Scanner;
 
 public class Server {
     public static void main(String[] args) {
@@ -14,8 +15,8 @@ public class Server {
             // 1. 소켓과 버퍼 만들기
             ServerSocket serverSocket = new ServerSocket(20000);
             Socket socket = serverSocket.accept();
-
-
+            PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+            Scanner sc = new Scanner(System.in);
             BufferedReader br = new BufferedReader(
               new InputStreamReader(socket.getInputStream())
             );
@@ -30,6 +31,14 @@ public class Server {
                     e.printStackTrace();
                 }
             }}).start();
+
+            // 3. 메시지 전송 스레드
+            new Thread(() -> {
+                while (true) {
+                    String keyboardMsg = sc.nextLine();
+                    pw.println(keyboardMsg);
+                }
+            }).start();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
